@@ -1,0 +1,36 @@
+@import  "../color.scss";
+
+.footer {
+    background-color:$primary-color;
+    color: $text-white;
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+    justify-content: space-between;
+    border-top: 1px solid $text-white;;
+    @include reset-user-agent-margins
+  }
+  
+  .footerSection {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .icons {
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    border-radius: 5px;
+    
+    i{
+        margin-right: .5rem ;
+        font-size: 1.5rem;
+        
+    }
+    i:last-child{
+        margin-right: -1rem ;
+       
+    }
+   
+}
