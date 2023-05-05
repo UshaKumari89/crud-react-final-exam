@@ -3,12 +3,9 @@ $secondary-color: #000000;
 $text-white: #ffffff;
 $text-secondary: #79b8f3;
 $btn-color:#2ecc71;
+$btn-red:rgb(236, 11, 11);
 
 
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
 
 
 @mixin reset-user-agent-margins {

@@ -1,15 +1,14 @@
 @import  "../color.scss";
 
 .footer {
-    background-color:$primary-color;
+   height: 2rem;
     color: $text-white;
     display: flex;
     flex-direction: row;
-    padding: 5%;
+    padding: 1rem ;
     justify-content: space-between;
     border-top: 1px solid $text-white;;
-    @include reset-user-agent-margins
-  }
+   
   
   .footerSection {
     display: flex;
@@ -33,4 +32,5 @@
        
     }
    
+  }
 }

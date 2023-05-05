@@ -1,16 +1,22 @@
 import React from "react";
-import style from "./Navbar.module.scss";
-import { Link } from "react-router-dom";
+import style from './Navbar.module.scss'
 
+function Navbar() {
 
-
-const heading= "Contact App"
-const Navbar = () => {
+const heading = 'Contact App'
   return (
-    <nav className={style.navbar}>
-      <Link to="/"><h2 className={style.heading}><i className="fa-sharp fa-solid fa-address-card fa-fade"></i> {heading}</h2></Link>
-   </nav>
+    <>
+      <nav>
+      <ul>
+        <li>
+          <span className={style.actualText}>&nbsp;{heading}&nbsp;</span>
+          <span className={style.hoverText} aria-hidden="true">&nbsp;{heading}&nbsp;
+          </span>
+        </li>
+        </ul>
+      </nav>
+    </>
   );
-};
+}
 
 export default Navbar;

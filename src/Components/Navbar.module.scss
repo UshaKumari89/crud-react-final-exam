@@ -1,29 +1,59 @@
-@import  "../color.scss";
+:root {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color-html: #2ecc71;
+  --fs-size: 3em;
+}
 
-.navbar {
-  background-color:$primary-color;
-  position: sticky;
-  top: 0;
-  padding: .5rem 2.5rem ;
+
+ul {
+  padding-top: 2rem;
   display: flex;
-  align-items: center;
   justify-content: center;
-  @include reset-user-agent-margins;
-  @include box-shadowing;
-  
-  .heading{
-    color:$text-white
-    
-    }
+  gap: 2rem;
+}
+
+ul li {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: 'Bruno Ace SC', cursive;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  cursor: pointer;
+}
+
+ul li .hoverText {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  width: 0%;
+  inset: 0;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+}
+
+ul li:nth-child(1) .hoverText {
+  color: var(--animation-color-html);
+  border-right: var(--border-right) solid var(--animation-color-html);
+  -webkit-text-stroke: 1px var(--animation-color-html);
 }
 
 
 
-// @media only screen and (max-width: $sm) {
-// .navbar{
-// padding: 1rem 1rem;
-// justify-content: left;
-// }
+ul li:hover .hoverText {
+  width: 100%;
+}
 
+ul li:nth-child(1):hover .hoverText {
+  filter: drop-shadow(0 0 25px var(--animation-color-html))
+}
 
-// }
