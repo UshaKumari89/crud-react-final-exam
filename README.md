@@ -14,7 +14,9 @@ Features:
 🚀 Deployed live on Netlify for easy access and demonstration
 
 Technologies Used:
-⚛️ React.js
+⚛️ React.js 
+Saas
+Redux
 
 🎨 CSS for styling
 
